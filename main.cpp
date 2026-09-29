@@ -1,5 +1,7 @@
 #include <iostream>
 
+#include "mathfuncs.h"
+
 int main() {
 	double firstNumber;
 	double secondNumber;
@@ -13,20 +15,20 @@ int main() {
 
 	switch (operation) {
 		case '+':
-			std::cout << firstNumber + secondNumber << '\n';
+			std::cout << add(firstNumber, secondNumber) << '\n';
 			break;
 		case '-':
-			std::cout << firstNumber - secondNumber << '\n';
+			std::cout << subtract(firstNumber, secondNumber) << '\n';
 			break;
 		case '*':
-			std::cout << firstNumber * secondNumber << '\n';
+			std::cout << multiply(firstNumber, secondNumber) << '\n';
 			break;
 		case '/':
 			if (secondNumber == 0) {
 				std::cout << "Cannot divide by zero.\n";
 				return 1;
 			}
-			std::cout << firstNumber / secondNumber << '\n';
+			std::cout << divide(firstNumber, secondNumber) << '\n';
 			break;
 		default:
 			std::cout << "Unsupported operation.\n";
