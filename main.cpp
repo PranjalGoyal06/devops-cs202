@@ -1,11 +1,21 @@
+#include <cassert>
 #include <iostream>
 
 #include "mathfuncs.h"
+
+void runMathTests() {
+	assert(add(2, 3) == 5);
+	assert(subtract(7, 4) == 3);
+	assert(multiply(6, 5) == 30);
+	assert(divide(20, 4) == 5);
+}
 
 int main() {
 	double firstNumber;
 	double secondNumber;
 	char operation;
+
+	runMathTests();
 
 	std::cout << "Enter an expression (for example, 2 + 3): ";
 	if (!(std::cin >> firstNumber >> operation >> secondNumber)) {
